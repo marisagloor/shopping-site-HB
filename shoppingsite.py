@@ -1,7 +1,7 @@
 """Ubermelon shopping application Flask server.
 
 Provides web interface for browsing melons, seeing detail about a melon, and
-put melons in a shopping cart.
+puting melons in a shopping cart.
 
 Authors: Joel Burton, Christian Fernandez, Meggie Mahnken, Katie Byers.
 """
@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 # A secret key is needed to use Flask sessioning features
 
-app.secret_key = 'this-should-be-something-unguessable'
+app.secret_key = '49864238765255894'
 
 # Normally, if you refer to an undefined variable in a Jinja template,
 # Jinja silently ignores this. This makes debugging difficult, so we'll
@@ -47,8 +47,8 @@ def show_melon(melon_id):
 
     Show all info about a melon. Also, provide a button to buy that melon.
     """
-
-    melon = melons.get_by_id("meli")
+    # input was "meli" changed to melon_id
+    melon = melons.get_by_id(melon_id)
     print(melon)
     return render_template("melon_details.html",
                            display_melon=melon)

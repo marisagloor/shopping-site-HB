@@ -35,7 +35,8 @@ class Melon(object):
     def __repr__(self):
         """Convenience method to show information about melon in console."""
 
-        return "<Melon: {}, {}, {}>".format(self.melon_id, self.common_name, self.price_str())
+        return "<Melon: {}, {}, {}>".format(self.melon_id,
+                                            self.common_name, self.price_str())
 
 
 def read_melon_types_from_file(filepath):
