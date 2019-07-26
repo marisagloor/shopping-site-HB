@@ -28,8 +28,15 @@
             </ul>
         </div>
 
+
     </div>
 </div>
+
+<ul>
+  {% for message in get_flashed_messages() %}
+  <li>{{ message }}</li>
+  {% endfor %}
+</ul>
 
 <div class="container">
 
